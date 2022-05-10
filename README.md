@@ -1,4 +1,4 @@
-#about contacts app
+# about contacts app
 this is a simple contact list app that you can use to add contact informations,
 which includes:
 
@@ -7,10 +7,10 @@ which includes:
    - email
    - phone number
    
-#development
+# development
 the program is built using react.js for the frontend and node.js for server backend.
 
-#installation
+# installation
 - Requires [NodeJS](https://nodejs.org/en/download/) v14+
 
 close this repository with
