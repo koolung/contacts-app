@@ -1,11 +1,22 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-export default function useLocalStorage(val) {
-  let [contacts, setContacts] = useState((val) => {
-    return [contacts, setContacts];
+function getSavedValue(key, initialValue) {
+  const savedValue = JSON.parse(localStorage.getItem(key));
+  if (savedValue) {
+    return savedValue[initialValue];
+  } else {
+    return initialValue;
+  }
+}
+
+export default function useLocalStorage(key, initialValue) {
+  let [value, setValue] = useState(() => {
+    return getSavedValue(key, initialValue);
   });
 
-  let [contact, setContact] = useState((val) => {
-    return [contacts, setContacts];
-  });
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(value));
+  }, [value, key]);
+
+  return [value, setValue];
 }
