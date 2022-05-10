@@ -13,8 +13,8 @@ the program is built using react.js for the frontend and node.js for server back
 # installation
 - Requires [NodeJS](https://nodejs.org/en/download/) v14+
 
-close this repository with
-or download the source code from 
+close this repository with https://github.com/koolung/contacts-app.git
+or download the source code from https://github.com/koolung/contacts-app.git
 
 after than, go to the project's directory and run the 'build_app.sh' script to install all the required dependencies
 of the application.
